@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Dark theme (default) - now pure black */
+    --background: 0 0% 0%;
+    --foreground: 220 30% 96%;
+    --card: 222 30% 12%;
+    --card-foreground: 220 30% 96%;
+    --popover: 222 30% 12%;
+    --popover-foreground: 220 30% 96%;
+    --primary: 220 100% 59%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 222 25% 18%;
+    --secondary-foreground: 220 30% 96%;
+    --muted: 222 25% 18%;
+    --muted-foreground: 220 20% 75%;
+    --accent: 220 100% 59%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 222 25% 22%;
+    --input: 222 25% 22%;
+    --ring: 220 100% 59%;
+    --radius: 0.5rem;
+    
+    /* Custom colors */
+    --navy-900: #000000;
+    --navy-800: #151d2e;
+    --navy-700: #1f2a40;
+    --navy-600: #2d3a52;
+    --blue-accent: #3d7bff;
+    --blue-light: #6b9fff;
+    --blue-dark: #2a5fd9;
+    --gray-text: #b8c0d4;
+    --gray-light: #f0f3f8;
+
+    /* Rooman brand colors (from logo) */
+    --rooman-navy: #1a325c;
+    --rooman-orange: #f58a1f;
+    --rooman-red: #e44124;
+    --rooman-green: #1c7b3a;
+  }
+  
+  .light {
+    /* Light theme */
+    --background: 220 25% 96%;
+    --foreground: 222 35% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 35% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 35% 15%;
+    --primary: 220 100% 55%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 20% 92%;
+    --secondary-foreground: 222 35% 15%;
+    --muted: 220 20% 92%;
+    --muted-foreground: 222 20% 45%;
+    --accent: 220 100% 55%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 220 20% 88%;
+    --input: 220 20% 88%;
+    --ring: 220 100% 55%;
+    
+    /* Custom colors for light mode */
+    --navy-900: #f0f3f8;
+    --navy-800: #ffffff;
+    --navy-700: #e8ecf5;
+    --navy-600: #dce2ef;
+    --gray-text: #5a6680;
+    --gray-light: #1a1f2e;
+
+    /* Rooman brand colors in light mode (slightly brightened where needed) */
+    --rooman-navy: #1a325c;
+    --rooman-orange: #f58a1f;
+    --rooman-red: #e44124;
+    --rooman-green: #1c7b3a;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+  
+  .font-mono {
+    font-family: 'IBM Plex Mono', monospace;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, var(--blue-accent) 0%, var(--blue-light) 100%);
+  }
+  
+  .glow-blue {
+    box-shadow: 0 0 40px rgba(61, 123, 255, 0.3);
+  }
+  
+  .glow-blue-sm {
+    box-shadow: 0 0 20px rgba(61, 123, 255, 0.2);
+  }
+  
+  .hexagon-clip {
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  }
+  
+  .bg-radial-glow {
+    background: radial-gradient(circle at 50% 55%, rgba(61, 123, 255, 0.15), transparent 55%);
+  }
+
+  /* Rooman brand utility classes */
+  .text-rooman-navy { color: var(--rooman-navy); }
+  .text-rooman-orange { color: var(--rooman-orange); }
+  .text-rooman-red { color: var(--rooman-red); }
+  .text-rooman-green { color: var(--rooman-green); }
+
+  .bg-rooman-orange { background-color: var(--rooman-orange); }
+  .bg-rooman-green { background-color: var(--rooman-green); }
+
+  .border-rooman-orange { border-color: var(--rooman-orange); }
+  .border-rooman-green { border-color: var(--rooman-green); }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--navy-900);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--navy-700);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--blue-accent);
+}
+
+/* Selection */
+::selection {
+  background: rgba(61, 123, 255, 0.3);
+  color: inherit;
+}
+
+/* Light mode specific overrides */
+.light .bg-radial-glow {
+  background: radial-gradient(circle at 50% 55%, rgba(61, 123, 255, 0.08), transparent 55%);
+}
+
+.light .glow-blue,
+.light .glow-blue-sm {
+  box-shadow: 0 0 30px rgba(61, 123, 255, 0.15);
+}
+
+/* Clients marquee animation */
+@keyframes clients-marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-clients-marquee {
+  animation: clients-marquee 18s linear infinite;
+}
+
+.animate-clients-marquee-reverse {
+  animation: clients-marquee 18s linear infinite;
+  animation-direction: reverse;
+}
