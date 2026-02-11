@@ -77,18 +77,28 @@ const ApplicationStagePage = () => {
         </div>
       </div>
 
-      <div ref={addToRefs} className="py-16 lg:py-24 bg-secondary/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div ref={addToRefs} className="overflow-hidden relative py-16 lg:py-24">
+        <video
+          className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+          src="/video 1.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+        />
+        <div className="absolute inset-0 bg-black/55" />
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">Program Objectives</h2>
-            <p className="text-lg text-gray-text dark:text-gray-text max-w-2xl mx-auto">Five key pillars that define our application-focused curriculum</p>
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Program Objectives</h2>
+            <p className="text-lg text-white/80 dark:text-white/80 max-w-2xl mx-auto">Five key pillars that define our application-focused curriculum</p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[ { icon: <Layers className="w-8 h-8 text-blue-600" />, title: 'Project Development', desc: 'Build real AI projects using no-code and low-code platforms, APIs, and development tools' }, { icon: <Brain className="w-8 h-8 text-purple-600" />, title: 'Model Training', desc: 'Learn to train, test, and evaluate machine learning models with real datasets' }, { icon: <Shield className="w-8 h-8 text-green-600" />, title: 'Ethical Development', desc: 'Apply ethical frameworks to AI projects addressing bias, fairness, and transparency' }, { icon: <Award className="w-8 h-8 text-amber-600" />, title: 'Portfolio Building', desc: 'Create a portfolio of AI projects demonstrating skills and creativity' }, { icon: <Globe className="w-8 h-8 text-indigo-600" />, title: 'Problem Solving', desc: 'Use AI to solve authentic problems in education, environment, health, and community' }, { icon: <Zap className="w-8 h-8 text-rose-600" />, title: 'Collaboration', desc: 'Work in teams on complex projects, developing communication and project management skills' } ].map((obj, idx) => (
-              <div key={idx} className="bg-secondary/30 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow border border-border">
+              <div key={idx} className="bg-black/35 backdrop-blur-sm rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow border border-white/10">
                 <div className="mb-4">{obj.icon}</div>
-                <h3 className="text-lg font-bold text-foreground mb-2">{idx + 1}. {obj.title}</h3>
-                <p className="text-gray-text dark:text-gray-text text-sm leading-relaxed">{obj.desc}</p>
+                <h3 className="text-lg font-bold text-white mb-2">{idx + 1}. {obj.title}</h3>
+                <p className="text-white/80 dark:text-white/80 text-sm leading-relaxed">{obj.desc}</p>
               </div>
             ))}
           </div>
@@ -139,17 +149,27 @@ const ApplicationStagePage = () => {
         </div>
       </div>
 
-      <div ref={addToRefs} className="py-16 lg:py-24 bg-secondary/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div ref={addToRefs} className="overflow-hidden relative py-16 lg:py-24">
+        <video
+          className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+          src="/video 2.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+        />
+        <div className="absolute inset-0 bg-black/55" />
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">Delivery Model</h2>
-            <p className="text-lg text-gray-text dark:text-gray-text max-w-3xl mx-auto mb-8">Project-based learning with mentorship and real-world applications</p>
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Delivery Model</h2>
+            <p className="text-lg text-white/80 dark:text-white/80 max-w-3xl mx-auto mb-8">Project-based learning with mentorship and real-world applications</p>
           </div>
           <div className="grid lg:grid-cols-3 gap-8 items-center">
-            <div className="bg-secondary/30 rounded-2xl p-8 shadow-lg border border-border">
+            <div className="bg-black/35 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-white/10">
               <div className="w-16 h-16 bg-red-100 dark:bg-red-900/30 rounded-2xl flex items-center justify-center mb-6"><Award className="w-8 h-8 text-red-600" /></div>
-              <h3 className="text-xl font-bold text-foreground mb-4">IAISO Certification</h3>
-              <div className="space-y-3 text-sm text-gray-text">
+              <h3 className="text-xl font-bold text-white mb-4">IAISO Certification</h3>
+              <div className="space-y-3 text-sm text-white/80">
                 <p>Awarded as <strong>Certified AI Application Developer (IAISO)</strong></p>
                 <p>Certified by the International Federation for Artificial Intelligence (IAISO) as a school-level applied AI program</p>
                 <p>Validates practical AI development skills and project completion</p>
@@ -162,10 +182,10 @@ const ApplicationStagePage = () => {
                 <div className="relative w-64 h-64 rounded-full bg-gradient-to-br from-cyan-100 to-blue-100 dark:from-cyan-900/30 dark:to-blue-900/30 flex items-center justify-center border-4 border-white dark:border-slate-700 shadow-2xl"><Globe className="w-32 h-32 text-cyan-600 dark:text-cyan-400" /></div>
               </div>
             </div>
-            <div className="bg-secondary/30 rounded-2xl p-8 shadow-lg border border-border">
+            <div className="bg-black/35 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-white/10">
               <div className="w-16 h-16 bg-indigo-100 dark:bg-indigo-900/30 rounded-2xl flex items-center justify-center mb-6"><GraduationCap className="w-8 h-8 text-indigo-600" /></div>
-              <h3 className="text-xl font-bold text-foreground mb-4">Program Investment</h3>
-              <div className="space-y-3 text-sm text-gray-text">
+              <h3 className="text-xl font-bold text-white mb-4">Program Investment</h3>
+              <div className="space-y-3 text-sm text-white/80">
                 <p><strong>Total Program Fee:</strong> USD 1,500</p>
                 <p>Inclusive of development tools, project resources, mentorship, assessments, and IAISO certification</p>
                 <p>Designed for practical, hands-on AI education and portfolio development</p>
@@ -180,22 +200,22 @@ const ApplicationStagePage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-600 mb-4">Value to Students</h2>
-            <p className="text-lg text-gray-text dark:text-gray-text max-w-2xl mx-auto">Application Stage Academic and Professional Benefits</p>
+            <p className="text-lg text-white/80 dark:text-white/80 max-w-2xl mx-auto">Application Stage Academic and Professional Benefits</p>
           </div>
           <div className="grid lg:grid-cols-2 gap-12">
-            <div className="bg-secondary/30 rounded-2xl p-8 shadow-lg border border-border">
-              <h3 className="text-xl font-bold text-foreground mb-6 flex items-center gap-3"><GraduationCap className="w-6 h-6 text-emerald-600" />For Students</h3>
+            <div className="bg-black/35 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-white/10">
+              <h3 className="text-xl font-bold text-white mb-6 flex items-center gap-3"><GraduationCap className="w-6 h-6 text-emerald-600" />For Students</h3>
               <ul className="space-y-4">
                 {['Develops practical skills to build real AI applications and solutions', 'Creates a portfolio demonstrating AI competency for future opportunities', 'Builds confidence through hands-on project completion and problem-solving', 'Prepares students for advanced studies in AI, CS, and technology fields'].map((item, idx) => (
-                  <li key={idx} className="flex items-start gap-3"><span className="w-6 h-6 rounded-full bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center flex-shrink-0 mt-0.5"><span className="text-emerald-600 text-sm">✓</span></span><span className="text-gray-text">{item}</span></li>
+                  <li key={idx} className="flex items-start gap-3"><span className="w-6 h-6 rounded-full bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center flex-shrink-0 mt-0.5"><span className="text-emerald-600 text-sm">✓</span></span><span className="text-white/80">{item}</span></li>
                 ))}
               </ul>
             </div>
-            <div className="bg-secondary/30 rounded-2xl p-8 shadow-lg border border-border">
-              <h3 className="text-xl font-bold text-foreground mb-6 flex items-center gap-3"><Building2 className="w-6 h-6 text-blue-600" />For Schools</h3>
+            <div className="bg-black/35 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-white/10">
+              <h3 className="text-xl font-bold text-white mb-6 flex items-center gap-3"><Building2 className="w-6 h-6 text-blue-600" />For Schools</h3>
               <ul className="space-y-4">
                 {['Positions the school as a leader in practical AI education and innovation', 'Enables integration with existing technology, science, and arts programs', 'Encourages interdisciplinary collaboration across multiple subjects', 'Prepares students for progression to Advancement Stage and beyond'].map((item, idx) => (
-                  <li key={idx} className="flex items-start gap-3"><span className="w-6 h-6 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center flex-shrink-0 mt-0.5"><span className="text-blue-600 text-sm">✓</span></span><span className="text-gray-text">{item}</span></li>
+                  <li key={idx} className="flex items-start gap-3"><span className="w-6 h-6 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center flex-shrink-0 mt-0.5"><span className="text-blue-600 text-sm">✓</span></span><span className="text-white/80">{item}</span></li>
                 ))}
               </ul>
             </div>

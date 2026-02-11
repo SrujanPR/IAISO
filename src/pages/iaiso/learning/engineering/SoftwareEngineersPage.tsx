@@ -86,18 +86,27 @@ const SoftwareEngineersPage = () => {
         </div>
       </div>
 
-      <div ref={addToRefs} className="py-16 lg:py-24 bg-secondary/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div ref={addToRefs} className="relative py-16 lg:py-24 overflow-hidden">
+        <video
+          className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+          src="/video 1.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+        />
+        <div className="absolute inset-0 bg-black/55" />
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">Program Objectives</h2>
-            <p className="text-lg text-gray-text dark:text-gray-text max-w-2xl mx-auto">Five key pillars that define our comprehensive curriculum</p>
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Program Objectives</h2>
+            <p className="text-lg text-white/80 max-w-2xl mx-auto">Five key pillars that define our comprehensive curriculum</p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[ { icon: <Layers className="w-8 h-8 text-blue-600" />, title: 'Design & Deploy', desc: 'Enable software engineers to design, build, and deploy AI-powered applications and automation systems' }, { icon: <Brain className="w-8 h-8 text-purple-600" />, title: 'Develop Competencies', desc: 'Develop competencies in intelligent software architecture, machine learning integration, and workflow automation' }, { icon: <Shield className="w-8 h-8 text-green-600" />, title: 'System Understanding', desc: 'Strengthen understanding of scalable, secure, and production-grade AI-enabled software systems' }, { icon: <Award className="w-8 h-8 text-amber-600" />, title: 'Ethical Awareness', desc: 'Instil ethical awareness around algorithmic bias, system transparency, reliability, and responsible engineering' }, { icon: <Globe className="w-8 h-8 text-indigo-600" />, title: 'Career Preparation', desc: 'Prepare graduates for advanced roles in AI-driven software development and intelligent system design' }, { icon: <Zap className="w-8 h-8 text-rose-600" />, title: 'Industry Readiness', desc: 'Bridge the gap between academic knowledge and industry requirements for AI-enabled software engineering' } ].map((obj, idx) => (
-              <div key={idx} className="bg-secondary/30 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow border border-border">
+              <div key={idx} className="bg-black/35 backdrop-blur-sm rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow border border-white/10">
                 <div className="mb-4">{obj.icon}</div>
-                <h3 className="text-lg font-bold text-foreground mb-2">{idx + 1}. {obj.title}</h3>
-                <p className="text-gray-text dark:text-gray-text text-sm leading-relaxed">{obj.desc}</p>
+                <h3 className="text-lg font-bold text-white mb-2">{idx + 1}. {obj.title}</h3>
+                <p className="text-white/80 text-sm leading-relaxed">{obj.desc}</p>
               </div>
             ))}
           </div>
@@ -146,17 +155,26 @@ const SoftwareEngineersPage = () => {
         </div>
       </div>
 
-      <div ref={addToRefs} className="py-16 lg:py-24 bg-secondary/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div ref={addToRefs} className="relative py-16 lg:py-24 overflow-hidden">
+        <video
+          className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+          src="/video 2.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+        />
+        <div className="absolute inset-0 bg-black/55" />
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">Delivery Model</h2>
-            <p className="text-lg text-gray-text dark:text-gray-text max-w-3xl mx-auto mb-8">Project-based lectures integrated with coding labs and system design studios</p>
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Delivery Model</h2>
+            <p className="text-lg text-white/80 max-w-3xl mx-auto mb-8">Project-based lectures integrated with coding labs and system design studios</p>
           </div>
           <div className="grid lg:grid-cols-3 gap-8 items-center">
-            <div className="bg-secondary/30 rounded-2xl p-8 shadow-lg border border-border">
+            <div className="bg-black/35 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-white/10">
               <div className="w-16 h-16 bg-red-100 dark:bg-red-900/30 rounded-2xl flex items-center justify-center mb-6"><Award className="w-8 h-8 text-red-600" /></div>
-              <h3 className="text-xl font-bold text-foreground mb-4">IAISO Certification</h3>
-              <div className="space-y-3 text-sm text-gray-text">
+              <h3 className="text-xl font-bold text-white mb-4">IAISO Certification</h3>
+              <div className="space-y-3 text-sm text-white/80">
                 <p>Awarded as <strong>Certified Specialist in Intelligent Software Engineering and Automation (IAISO)</strong></p>
                 <p>Certified by the International Federation for Artificial Intelligence (IAISO) as an engineering–AI integration program</p>
                 <p>Validates advanced competence in AI-powered application development, automation systems, and intelligent software architecture</p>
@@ -169,10 +187,10 @@ const SoftwareEngineersPage = () => {
                 <div className="relative w-64 h-64 rounded-full bg-gradient-to-br from-cyan-100 to-blue-100 dark:from-cyan-900/30 dark:to-blue-900/30 flex items-center justify-center border-4 border-white dark:border-slate-700 shadow-2xl"><Globe className="w-32 h-32 text-cyan-600 dark:text-cyan-400" /></div>
               </div>
             </div>
-            <div className="bg-secondary/30 rounded-2xl p-8 shadow-lg border border-border">
+            <div className="bg-black/35 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-white/10">
               <div className="w-16 h-16 bg-indigo-100 dark:bg-indigo-900/30 rounded-2xl flex items-center justify-center mb-6"><GraduationCap className="w-8 h-8 text-indigo-600" /></div>
-              <h3 className="text-xl font-bold text-foreground mb-4">Program Investment</h3>
-              <div className="space-y-3 text-sm text-gray-text">
+              <h3 className="text-xl font-bold text-white mb-4">Program Investment</h3>
+              <div className="space-y-3 text-sm text-white/80">
                 <p><strong>Total Program Fee:</strong> USD 1,500</p>
                 <p>Inclusive of academic delivery, assessments, capstone evaluation, and IAISO certification issuance</p>
                 <p>Designed to deliver high value through globally relevant credentials and industry-aligned learning outcomes</p>

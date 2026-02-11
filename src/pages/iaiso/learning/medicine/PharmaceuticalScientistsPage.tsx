@@ -77,18 +77,28 @@ const PharmaceuticalScientistsPage = () => {
         </div>
       </div>
 
-      <div ref={addToRefs} className="py-16 lg:py-24 bg-secondary/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div ref={addToRefs} className="overflow-hidden relative py-16 lg:py-24">
+        <video
+          className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+          src="/video 1.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+        />
+        <div className="absolute inset-0 bg-black/55" />
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">Program Objectives</h2>
-            <p className="text-lg text-gray-text dark:text-gray-text max-w-2xl mx-auto">Five key pillars that define our comprehensive curriculum</p>
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Program Objectives</h2>
+            <p className="text-lg text-white/80 dark:text-white/80 max-w-2xl mx-auto">Five key pillars that define our comprehensive curriculum</p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[ { icon: <Layers className="w-8 h-8 text-blue-600" />, title: 'Design & Deploy', desc: 'Enable pharmaceutical scientists to design, build, and deploy AI-powered drug discovery and development systems' }, { icon: <Brain className="w-8 h-8 text-purple-600" />, title: 'Develop Competencies', desc: 'Develop competencies in molecular modeling, clinical trial AI, and pharmacovigilance analytics' }, { icon: <Shield className="w-8 h-8 text-green-600" />, title: 'Scientific Rigor', desc: 'Strengthen understanding of evidence-based, regulatory-compliant, and ethically-sound AI-enabled pharmaceutical science' }, { icon: <Award className="w-8 h-8 text-amber-600" />, title: 'Ethical Awareness', desc: 'Instil ethical awareness around patient safety, data integrity, and responsible AI in drug development' }, { icon: <Globe className="w-8 h-8 text-indigo-600" />, title: 'Career Preparation', desc: 'Prepare graduates for advanced roles in pharma R&D, biotech, clinical research, and regulatory science' }, { icon: <Zap className="w-8 h-8 text-rose-600" />, title: 'Innovation Readiness', desc: 'Bridge the gap between pharmaceutical science and cutting-edge AI-enabled drug discovery' } ].map((obj, idx) => (
-              <div key={idx} className="bg-secondary/30 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow border border-border">
+              <div key={idx} className="bg-black/35 backdrop-blur-sm rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow border border-white/10">
                 <div className="mb-4">{obj.icon}</div>
-                <h3 className="text-lg font-bold text-foreground mb-2">{idx + 1}. {obj.title}</h3>
-                <p className="text-gray-text dark:text-gray-text text-sm leading-relaxed">{obj.desc}</p>
+                <h3 className="text-lg font-bold text-white mb-2">{idx + 1}. {obj.title}</h3>
+                <p className="text-white/80 dark:text-white/80 text-sm leading-relaxed">{obj.desc}</p>
               </div>
             ))}
           </div>
@@ -137,17 +147,27 @@ const PharmaceuticalScientistsPage = () => {
         </div>
       </div>
 
-      <div ref={addToRefs} className="py-16 lg:py-24 bg-secondary/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div ref={addToRefs} className="overflow-hidden relative py-16 lg:py-24">
+        <video
+          className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+          src="/video 2.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+        />
+        <div className="absolute inset-0 bg-black/55" />
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">Delivery Model</h2>
-            <p className="text-lg text-gray-text dark:text-gray-text max-w-3xl mx-auto mb-8">Research-based learning integrated with pharmaceutical labs and computational chemistry studios</p>
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Delivery Model</h2>
+            <p className="text-lg text-white/80 dark:text-white/80 max-w-3xl mx-auto mb-8">Research-based learning integrated with pharmaceutical labs and computational chemistry studios</p>
           </div>
           <div className="grid lg:grid-cols-3 gap-8 items-center">
-            <div className="bg-secondary/30 rounded-2xl p-8 shadow-lg border border-border">
+            <div className="bg-black/35 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-white/10">
               <div className="w-16 h-16 bg-red-100 dark:bg-red-900/30 rounded-2xl flex items-center justify-center mb-6"><Award className="w-8 h-8 text-red-600" /></div>
-              <h3 className="text-xl font-bold text-foreground mb-4">IAISO Certification</h3>
-              <div className="space-y-3 text-sm text-gray-text">
+              <h3 className="text-xl font-bold text-white mb-4">IAISO Certification</h3>
+              <div className="space-y-3 text-sm text-white/80">
                 <p>Awarded as <strong>Certified Specialist in AI for Pharmaceutical Scientists (IAISO)</strong></p>
                 <p>Certified by the International Federation for Artificial Intelligence (IAISO) as a medicine–AI integration program</p>
                 <p>Validates advanced competence in AI-powered drug discovery, pharmaceutical research, and clinical trial optimization</p>
@@ -160,10 +180,10 @@ const PharmaceuticalScientistsPage = () => {
                 <div className="relative w-64 h-64 rounded-full bg-gradient-to-br from-cyan-100 to-blue-100 dark:from-cyan-900/30 dark:to-blue-900/30 flex items-center justify-center border-4 border-white dark:border-slate-700 shadow-2xl"><Globe className="w-32 h-32 text-cyan-600 dark:text-cyan-400" /></div>
               </div>
             </div>
-            <div className="bg-secondary/30 rounded-2xl p-8 shadow-lg border border-border">
+            <div className="bg-black/35 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-white/10">
               <div className="w-16 h-16 bg-indigo-100 dark:bg-indigo-900/30 rounded-2xl flex items-center justify-center mb-6"><GraduationCap className="w-8 h-8 text-indigo-600" /></div>
-              <h3 className="text-xl font-bold text-foreground mb-4">Program Investment</h3>
-              <div className="space-y-3 text-sm text-gray-text">
+              <h3 className="text-xl font-bold text-white mb-4">Program Investment</h3>
+              <div className="space-y-3 text-sm text-white/80">
                 <p><strong>Total Program Fee:</strong> USD 1,500</p>
                 <p>Inclusive of academic delivery, assessments, capstone evaluation, and IAISO certification issuance</p>
                 <p>Designed to deliver high value through globally relevant credentials and research-aligned learning outcomes</p>
@@ -178,22 +198,22 @@ const PharmaceuticalScientistsPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-600 mb-4">Value to University</h2>
-            <p className="text-lg text-gray-text dark:text-gray-text max-w-2xl mx-auto">Pharmaceutical Scientists Academic and Professional Advantage</p>
+            <p className="text-lg text-white/80 dark:text-white/80 max-w-2xl mx-auto">Pharmaceutical Scientists Academic and Professional Advantage</p>
           </div>
           <div className="grid lg:grid-cols-2 gap-12">
-            <div className="bg-secondary/30 rounded-2xl p-8 shadow-lg border border-border">
-              <h3 className="text-xl font-bold text-foreground mb-6 flex items-center gap-3"><GraduationCap className="w-6 h-6 text-emerald-600" />For Medicine Students</h3>
+            <div className="bg-black/35 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-white/10">
+              <h3 className="text-xl font-bold text-white mb-6 flex items-center gap-3"><GraduationCap className="w-6 h-6 text-emerald-600" />For Medicine Students</h3>
               <ul className="space-y-4">
                 {['Transforms pharmaceutical science into a future-ready discipline centered on AI-driven drug discovery', 'Expands career pathways into pharma R&D, biotech, clinical research, regulatory science, and precision medicine', 'Strengthens readiness for professional roles in AI-first and technology-enabled pharmaceutical organizations'].map((item, idx) => (
-                  <li key={idx} className="flex items-start gap-3"><span className="w-6 h-6 rounded-full bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center flex-shrink-0 mt-0.5"><span className="text-emerald-600 text-sm">✓</span></span><span className="text-gray-text">{item}</span></li>
+                  <li key={idx} className="flex items-start gap-3"><span className="w-6 h-6 rounded-full bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center flex-shrink-0 mt-0.5"><span className="text-emerald-600 text-sm">✓</span></span><span className="text-white/80">{item}</span></li>
                 ))}
               </ul>
             </div>
-            <div className="bg-secondary/30 rounded-2xl p-8 shadow-lg border border-border">
-              <h3 className="text-xl font-bold text-foreground mb-6 flex items-center gap-3"><Building2 className="w-6 h-6 text-blue-600" />Institutional Impact</h3>
+            <div className="bg-black/35 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-white/10">
+              <h3 className="text-xl font-bold text-white mb-6 flex items-center gap-3"><Building2 className="w-6 h-6 text-blue-600" />Institutional Impact</h3>
               <ul className="space-y-4">
                 {['Positions the university as a leader in AI-integrated pharmaceutical education and drug discovery', 'Encourages collaboration across Pharmacy, Chemistry, Biology, Computer Science, and AI departments'].map((item, idx) => (
-                  <li key={idx} className="flex items-start gap-3"><span className="w-6 h-6 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center flex-shrink-0 mt-0.5"><span className="text-blue-600 text-sm">✓</span></span><span className="text-gray-text">{item}</span></li>
+                  <li key={idx} className="flex items-start gap-3"><span className="w-6 h-6 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center flex-shrink-0 mt-0.5"><span className="text-blue-600 text-sm">✓</span></span><span className="text-white/80">{item}</span></li>
                 ))}
               </ul>
             </div>
