@@ -225,6 +225,7 @@ export default function ModernBackgroundPaths({
   title = "Neural Dynamics",
   description = "Experience the future of interactive design with dynamic pattern generation",
   ctaLabel = "Explore Patterns",
+  backgroundVideoSrc,
   ctaHref,
   ctaVariant = "ghost",
   ctaClassName,
@@ -234,6 +235,7 @@ export default function ModernBackgroundPaths({
   title?: string
   description?: string
   ctaLabel?: string
+  backgroundVideoSrc?: string
   ctaHref?: string
   ctaVariant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link"
   ctaClassName?: string
@@ -273,36 +275,53 @@ export default function ModernBackgroundPaths({
         className
       )}
     >
-      <div className="absolute inset-0 text-foreground/40">
-        <motion.div
-          key={currentPattern}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 2 }}
-        >
-          {renderPattern()}
-        </motion.div>
-      </div>
+      {backgroundVideoSrc ? (
+        <video
+          className="absolute inset-0 h-full w-full object-cover pointer-events-none"
+          src={backgroundVideoSrc}
+          autoPlay
+          muted
+          loop
+          playsInline
+        />
+      ) : null}
 
-      <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-background/60" />
+      {backgroundVideoSrc ? (
+        <div className="absolute inset-0 bg-black/65" />
+      ) : (
+        <>
+          <div className="absolute inset-0 text-foreground/40">
+            <motion.div
+              key={currentPattern}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 2 }}
+            >
+              {renderPattern()}
+            </motion.div>
+          </div>
 
-      <div className="absolute right-8 top-8 z-20 flex gap-2">
-        {patterns.map((_, i) => (
-          <motion.div
-            key={i}
-            className={cn(
-              "h-2 w-2 rounded-full transition-colors duration-300",
-              i === currentPattern ? "bg-rooman-orange" : "bg-foreground/20"
-            )}
-            animate={{
-              scale: i === currentPattern ? 1.2 : 1,
-              opacity: i === currentPattern ? 1 : 0.5,
-            }}
-            transition={{ duration: 0.3 }}
-          />
-        ))}
-      </div>
+          <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-background/60" />
+
+          <div className="absolute right-8 top-8 z-20 flex gap-2">
+            {patterns.map((_, i) => (
+              <motion.div
+                key={i}
+                className={cn(
+                  "h-2 w-2 rounded-full transition-colors duration-300",
+                  i === currentPattern ? "bg-rooman-orange" : "bg-foreground/20"
+                )}
+                animate={{
+                  scale: i === currentPattern ? 1.2 : 1,
+                  opacity: i === currentPattern ? 1 : 0.5,
+                }}
+                transition={{ duration: 0.3 }}
+              />
+            ))}
+          </div>
+        </>
+      )}
 
       <div className="relative z-10 flex min-h-screen w-full items-center justify-center">
         <div className="container mx-auto px-4 text-center md:px-6">
@@ -313,7 +332,7 @@ export default function ModernBackgroundPaths({
             className="mx-auto max-w-5xl"
           >
             <div className="mb-8">
-              <h1 className="mb-4 text-6xl font-black leading-none tracking-tighter sm:text-8xl md:text-9xl">
+              <h1 className="mb-4 text-6xl font-black leading-none tracking-tighter sm:text-8xl md:text-9xl drop-shadow-[0_8px_24px_rgba(0,0,0,0.55)]">
                 {words.map((word, wordIndex) => (
                   <span key={wordIndex} className="mr-6 inline-block last:mr-0">
                     {word.split("").map((letter, letterIndex) => (
@@ -346,7 +365,10 @@ export default function ModernBackgroundPaths({
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1, duration: 1 }}
-                className="mx-auto max-w-2xl text-xl font-light tracking-wide text-muted-foreground md:text-2xl"
+                className={cn(
+                  "mx-auto max-w-2xl text-xl font-semibold tracking-wide md:text-2xl",
+                  backgroundVideoSrc ? "text-white/90 drop-shadow-[0_4px_18px_rgba(0,0,0,0.55)]" : "text-muted-foreground"
+                )}
               >
                 {description}
               </motion.p>
@@ -435,31 +457,35 @@ export default function ModernBackgroundPaths({
         </div>
       </div>
 
-      <motion.div
-        className="absolute left-1/4 top-1/4 h-4 w-4 rounded-full bg-rooman-orange/20 blur-sm"
-        animate={{
-          y: [0, -20, 0],
-          x: [0, 10, 0],
-          scale: [1, 1.2, 1],
-          opacity: [0.3, 0.7, 0.3],
-        }}
-        transition={{ duration: 6, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
-      />
-      <motion.div
-        className="absolute right-1/3 top-3/4 h-6 w-6 rounded-full bg-rooman-orange/20 blur-sm"
-        animate={{
-          y: [0, 15, 0],
-          x: [0, -15, 0],
-          scale: [1, 0.8, 1],
-          opacity: [0.5, 0.8, 0.5],
-        }}
-        transition={{
-          duration: 8,
-          repeat: Number.POSITIVE_INFINITY,
-          ease: "easeInOut",
-          delay: 2,
-        }}
-      />
+      {backgroundVideoSrc ? null : (
+        <>
+          <motion.div
+            className="absolute left-1/4 top-1/4 h-4 w-4 rounded-full bg-rooman-orange/20 blur-sm"
+            animate={{
+              y: [0, -20, 0],
+              x: [0, 10, 0],
+              scale: [1, 1.2, 1],
+              opacity: [0.3, 0.7, 0.3],
+            }}
+            transition={{ duration: 6, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
+          />
+          <motion.div
+            className="absolute right-1/3 top-3/4 h-6 w-6 rounded-full bg-rooman-orange/20 blur-sm"
+            animate={{
+              y: [0, 15, 0],
+              x: [0, -15, 0],
+              scale: [1, 0.8, 1],
+              opacity: [0.5, 0.8, 0.5],
+            }}
+            transition={{
+              duration: 8,
+              repeat: Number.POSITIVE_INFINITY,
+              ease: "easeInOut",
+              delay: 2,
+            }}
+          />
+        </>
+      )}
     </div>
   )
 }

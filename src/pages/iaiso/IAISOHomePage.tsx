@@ -12,7 +12,6 @@ import {
   CardHoverRevealContent,
   CardHoverRevealMain,
 } from '@/components/ui/reveal-on-hover';
-import { Badge } from '@/components/ui/badge';
 import { 
   Award,
   BookOpen,
@@ -118,6 +117,7 @@ const IAISOHomePage = () => {
           title="IAISO"
           description="International Artificial Intelligence Standards Organisation brings together professionals, organizations, and assessors to build trusted AI standards and capabilities."
           ctaLabel="JOIN IAISO"
+          backgroundVideoSrc="/video 3.mp4"
           ctaHref="/membership"
           ctaVariant="default"
           ctaClassName="bg-rooman-orange text-white hover:bg-rooman-orange/90"
